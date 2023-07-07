@@ -1,5 +1,5 @@
 //TC : O(N)
-//MC : O(N + M)
+//MC : O(N)
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
