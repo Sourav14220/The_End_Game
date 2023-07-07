@@ -1,0 +1,17 @@
+//TC : O(N)
+//MC : O(1)
+class Solution {
+public:
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+     vector <int> allMissing;
+     for(int i = 0 ; i < nums.size( ) ; i++) {
+       int index = abs(nums[i]) - 1;
+        if(index < nums.size() && nums[index] > 0)
+           nums[index] = -nums[index];
+     }
+     for(int i = 0 ; i < nums.size( ) ; i++) {
+        if(nums[i] > 0) allMissing.push_back(i + 1);
+     }
+     return allMissing;
+    }
+};
